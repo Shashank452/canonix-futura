@@ -83,11 +83,15 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ${
-            isMobileMenuOpen ? 'max-h-80 pb-6' : 'max-h-0'
+          className={`md:hidden overflow-y-auto transition-all duration-500 ${
+            isMobileMenuOpen ? 'max-h-[calc(100vh-5rem)] pb-8' : 'max-h-0'
           }`}
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'var(--muted) var(--background)'
+          }}
         >
-          <div className="flex flex-col gap-4 pt-4 border-t border-border">
+          <div className="flex flex-col gap-5 pt-6 pb-4 px-1 border-t border-border">
             {navLinks.map((link) => (
               <a
                 key={link.href}

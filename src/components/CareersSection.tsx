@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { Lightbulb, TrendingUp, Users, FlaskConical, Mail } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Lightbulb, Mail, TrendingUp, Users, FlaskConical } from 'lucide-react';
 
 const benefits = [
   {
@@ -35,14 +35,12 @@ const CareersSection = () => {
       ref={sectionRef}
       className="relative py-32 overflow-hidden"
     >
-      {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="section-container relative z-10">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="scroll-animate animate-slide-up opacity-0 inline-block text-primary font-medium text-sm tracking-widest uppercase mb-4">
             Join Our Team
@@ -56,7 +54,6 @@ const CareersSection = () => {
           </p>
         </div>
 
-        {/* Benefits Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {benefits.map((benefit, index) => (
             <div
@@ -73,7 +70,6 @@ const CareersSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="scroll-animate animate-slide-up opacity-0 stagger-3 text-center">
           <div className="card-futuristic rounded-3xl p-10 max-w-2xl mx-auto relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
@@ -85,8 +81,10 @@ const CareersSection = () => {
               let us know how you can contribute to our mission.
             </p>
             <a
-              href="mailto:careers@canonix.in"
-              className="btn-outline px-8 py-3 rounded-xl text-base font-semibold text-foreground inline-flex items-center gap-2"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@canonix.in&su=Job Application - Resume Submission"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline px-8 py-3 rounded-xl text-base font-semibold text-foreground inline-flex items-center gap-2 hover:bg-primary/5 transition-colors"
             >
               <Mail className="w-5 h-5" />
               Send Your Resume
